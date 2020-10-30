@@ -6,6 +6,7 @@ dotenv.config();
 
 const authRoute = require('./routes/authRoute');
 const flatsRoute = require('./routes/flatsRoute');
+const tenantsRoute = require('./routes/tenantsRoute');
 
 const app = express();
 
@@ -30,7 +31,7 @@ mongoose.connect(
 
 app.use('/api/managers', authRoute);
 app.use('/api/flats', flatsRoute);
-// app.use('/api/tenants', tenantsRoute);
+app.use('/api/tenants', tenantsRoute);
 
 const port = 5000;
 app.listen(port, () => console.log(`The server is up and running on port ${5000}`));
