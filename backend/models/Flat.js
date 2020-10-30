@@ -17,7 +17,7 @@ const flatSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        roomNo: {
+        flatNo: {
             type: Number,
             required: true
         }

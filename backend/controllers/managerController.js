@@ -33,7 +33,7 @@ const registerManager = async (req, res) => {
             age
         });
 
-        const savedManager = manager.save();
+        const savedManager = await manager.save();
 
         const tokenisedManager = { email: savedManager.email };
         const accessToken = await jwt.sign(tokenisedManager, process.env.SECRET_KEY_TO_ACCESS);
