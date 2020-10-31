@@ -54,7 +54,15 @@ const Register = () => {
     };
 
     return (
-        <div style={{ background: '#f5f5f5', margin: 'auto', width: '500px', padding: '20px', borderRadius: '5px' }}>
+        <div
+            style={{
+                margin: 'auto',
+                width: '500px',
+                padding: '20px',
+                borderRadius: '5px'
+            }}
+            className="box"
+        >
             <Form
                 {...layout}
                 name="basic"
@@ -70,6 +78,8 @@ const Register = () => {
                 }}
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
+                size="middle"
+                className="itemSpacing"
             >
                 <Form.Item
                     label="First Name"

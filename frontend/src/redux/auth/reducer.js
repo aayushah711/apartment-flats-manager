@@ -5,7 +5,7 @@ let initState = {
     isLoading: false,
     error: false,
     message: '',
-    isAuth: false,
+    isAuth: true,
     accessToken: ''
 };
 

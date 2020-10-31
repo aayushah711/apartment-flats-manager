@@ -1,0 +1,14 @@
+.hello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hello > * {
+    color: white;
+    padding: 0 10px;
+}
+
+.logout {
+    cursor: pointer;
+    text-decoration: none;
+}

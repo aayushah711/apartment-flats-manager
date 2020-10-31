@@ -1,7 +1,31 @@
-@import '~antd/dist/antd.css';
+/* @import '~antd/dist/antd.css'; */
+@import './styles/css/antd.css';
 
 .App {
     text-align: left;
+}
+
+.header {
+    position: 'fixed';
+    z-index: 1;
+    width: 100%;
+    color: white;
+    background: '#001529';
+}
+
+.content {
+    padding: 50px;
+    min-height: 90vh;
+}
+
+.box {
+    background-color: #722ed10c;
+    border: #722ed1 1px solid;
+}
+
+.itemSpacing > * {
+    padding: 1px;
+    margin: 1px;
 }
 
 .App-logo {
