@@ -2,7 +2,8 @@ import React from 'react';
 import { Form, Input, Button, Checkbox, Radio } from 'antd';
 import axios from 'axios';
 import { loginUserSuccess, loginUserFailure } from '../redux/auth/actions';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 const layout = {
     labelCol: {
@@ -22,6 +23,7 @@ const tailLayout = {
 };
 
 const Register = () => {
+    const state = useSelector((state) => state.auth);
     const dispatch = useDispatch();
     const onFinish = (values) => {
         const { firstName, lastName, email, password, gender, avatar, age } = values;
@@ -52,6 +54,10 @@ const Register = () => {
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
     };
+
+    if (state.isAuth) {
+        return <Redirect to="/" />;
+    }
 
     return (
         <div
@@ -136,7 +142,7 @@ const Register = () => {
                 <Form.Item label="Gender" name="gender" rules={[ { required: true, message: 'Please pick an item!' } ]}>
                     <Radio.Group label="Gender" name="gender">
                         <Radio value={'male'}>Male</Radio>
-                        <Radio value={'female1'}>Female</Radio>
+                        <Radio value={'female'}>Female</Radio>
                         <Radio value={'other'}>Want to keep it secret</Radio>
                     </Radio.Group>
                 </Form.Item>

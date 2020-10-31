@@ -6,7 +6,8 @@ let initState = {
     error: false,
     message: '',
     isAuth: true,
-    accessToken: ''
+    accessToken:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbXBsZUBnbWFpbC5jb20iLCJpYXQiOjE2MDQxMjE2Mjd9.9-0R6duhBGzYewly3Eol4OZRfuCpDdAFoI0v-dggq6w'
 };
 
 let accessToken = loadData('accessToken');
